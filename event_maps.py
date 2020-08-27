@@ -229,7 +229,7 @@ def plotshots(firsthalf, secondhalf):
                     assist.append('y')
                 else:
                     assist.append('aqua')
-        # print(shot['shot']['type'])
+
         miss=1.2
         goal=1.5
         if shot['shot']['outcome']['id'] != 97:
@@ -353,7 +353,7 @@ def merge(fh,sh):
     background.show()
     background.save('shotmap{}{}.png'.format(fh,sh))
 
-
+# plotting data over multiple seasons
 def data_range(beginning,end):
     data={}
     for i in range(beginning,end):
@@ -402,13 +402,6 @@ def data_range(beginning,end):
         #plt.scatter(season['median shot location'][0],season['median shot location'][1])
 
 
-
-
 #calling functions
-#for i in range(2004,2019):
-    #plotdribbles(i,i+1)
-    #plotshots(i,i+1)
-#plotdribbles(2008,2009)
 plotshots(2007,2008)
-data_range(2004,2006)
 
